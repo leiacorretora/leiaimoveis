@@ -127,6 +127,7 @@ main {
 
 .imagem-container img {
   max-width: 100%;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 0 6px rgba(0,0,0,0.2);
 }
@@ -204,7 +205,7 @@ main {
 .avaliacoes footer {
   text-align: right;
   font-weight: 600;
-  color: #ffffff;
+  color: #a80000;
 }
 
 /* Rodapé */
@@ -225,8 +226,14 @@ footer {
     flex-direction: column;
   }
 
+  /* Imagens em banner ocupando tela inteira no mobile */
   .imagem-container img {
-    max-width: 80%;
+    width: 100vw;
+    max-width: none;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
   }
 
   .menu-fixo ul {
