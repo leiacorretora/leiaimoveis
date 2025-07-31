@@ -1,0 +1,236 @@
+/* Reset base */
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  background: #f8f8f8;
+  color: #333;
+}
+
+/* Menu fixo */
+.menu-fixo {
+  background: #a80000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.menu-fixo ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.menu-fixo a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.menu-fixo a:hover {
+  color: #ffcccc;
+}
+
+/* Espaço para menu fixo */
+header {
+  padding-top: 70px;
+}
+
+header {
+  background: #a80000;
+  color: white;
+  text-align: center;
+  padding: 20px 15px;
+}
+
+header h1 {
+  margin: 0 0 5px;
+  font-weight: 700;
+}
+
+header p {
+  margin: 0 0 15px;
+}
+
+/* Botões topo */
+.contatos-topo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn {
+  background: #fff;
+  color: #a80000;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #a80000;
+  color: white;
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+/* Serviços */
+.servicos {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.servico {
+  background: white;
+  flex: 1 1 250px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.servico i {
+  font-size: 30px;
+  color: #a80000;
+  margin-bottom: 10px;
+}
+
+.servico h3 {
+  margin: 10px 0;
+  color: #a80000;
+}
+
+/* Imagens */
+.imagem-container {
+  display: flex;
+  justify-content: center;
+}
+
+.imagem-container img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+/* Checklists */
+.checklist {
+  list-style: none;
+  padding: 0;
+}
+
+.checklist li {
+  background: #fff;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checklist i {
+  color: #28a745;
+  font-size: 18px;
+}
+
+/* FAQ */
+.faq details {
+  background: white;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.faq summary {
+  font-weight: 600;
+  cursor: pointer;
+  color: #a80000;
+}
+
+.faq p {
+  margin: 8px 0 0;
+  color: #333;
+}
+
+/* Endereço */
+.endereco {
+  text-align: center;
+  font-weight: 600;
+  color: #555;
+  margin: 10px 0;
+}
+
+.mapa-btn {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.endereco-footer {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Avaliações */
+.avaliacoes blockquote {
+  background: #fff0f0;
+  border-left: 5px solid #a80000;
+  margin: 15px 0;
+  padding: 10px 15px;
+  border-radius: 2px;
+  font-style: italic;
+}
+
+.avaliacoes footer {
+  text-align: right;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Rodapé */
+footer {
+  background: #a80000;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .servicos {
+    flex-direction: column;
+  }
+
+  .contatos-topo {
+    flex-direction: column;
+  }
+
+  .imagem-container img {
+    max-width: 80%;
+  }
+
+  .menu-fixo ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
