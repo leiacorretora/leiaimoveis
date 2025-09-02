@@ -109,15 +109,27 @@ main {
 }
 
 .servico i {
-  font-size: 30px;
+  font-size: 32px;
   color: #a80000;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .servico h3 {
   margin: 10px 0;
   color: #a80000;
 }
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .servicos {
+    flex-direction: column;
+  }
+
+  .servico {
+    margin-bottom: 15px;
+  }
+}
+
 
 /* Imóveis */
 .imoveis {
@@ -331,3 +343,4 @@ footer {
     align-items: center;
   }
 }
+
