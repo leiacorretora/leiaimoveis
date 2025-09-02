@@ -119,6 +119,97 @@ main {
   color: #a80000;
 }
 
+/* Imóveis */
+.imoveis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.imovel {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  flex: 1 1 280px;
+  max-width: 320px;
+  position: relative;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: none;
+}
+
+.slider img.ativo {
+  display: block;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider .prev { left: 10px; }
+.slider .next { right: 10px; }
+
+/* Títulos e descrições */
+.imovel h3 {
+  color: #a80000;
+  margin: 10px 0;
+}
+
+.imovel .descricao {
+  padding: 0 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.imovel .preco {
+  font-weight: 700;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Tags de status */
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #a80000;
+  color: white;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  z-index: 2;
+}
+
+.tag.aluguel { background: #007bff; }
+.tag.venda { background: #28a745; }
+
+
 /* Imagens */
 .imagem-container {
   display: flex;
