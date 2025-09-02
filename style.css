@@ -155,13 +155,13 @@ main {
 .slider {
   position: relative;
   width: 100%;
-  height: 200px;
+  aspect-ratio: 1 / 1; /* Proporção 1:1 */
   overflow: hidden;
 }
 
 .slider img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
   display: none;
 }
