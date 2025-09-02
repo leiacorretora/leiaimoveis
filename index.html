@@ -57,6 +57,61 @@
     </div>
   </section>
 
+<!-- Imóveis em Destaque -->
+<section id="imoveis">
+  <h2>Imóveis em Destaque</h2>
+  <div class="imoveis">
+
+    <!-- Card do Imóvel -->
+    <div class="imovel">
+  <span class="tag venda">À Venda</span>
+  <div class="slider">
+    <img src="felix soares/1.png" alt="Casa" class="ativo" />
+    <img src="felix soares/2.png" alt="Casa" />
+    <img src="felix soares/3.png" alt="Casa" />
+    <img src="felix soares/4.png" alt="Casa" />
+    <img src="felix soares/5.png" alt="Casa" />
+    <img src="felix soares/6.png" alt="Casa" />
+    <img src="felix soares/7.png" alt="Casa />
+    <img src="felix soares/8.png" alt="Casa moderna" />
+    <img src="felix soares/9.png" alt="Casa moderna" />
+    <img src="felix soares/10.png" alt="Casa moderna" />
+    <img src="felix soares/11.png" alt="Casa moderna" />
+    <img src="felix soares/12.png" alt="Casa moderna" />
+    <img src="felix soares/13.png" alt="Casa moderna" />
+
+
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+  <h3>Casa no Teixeirinha - 2 suítes</h3>
+  <p class="descricao"> Linda casa, ampla e arejada. 
+    Escritório ou 3º quarto, perfeito para quem trabalha em home office ou precisa de mais espaço. </p>
+  <p class="preco">R$ 560.000,00</p>
+  <a href="https://api.whatsapp.com/send/?phone=5573999850066" class="btn">Mais informações</a>
+</div>
+
+    <!-- Outro imóvel
+    <div class="imovel">
+      <span class="tag aluguel">Para Alugar</span>
+      <div class="slider">
+        <img src="imagens/apto1-1.jpg" alt="Apartamento - fachada" class="ativo" />
+        <img src="imagens/apto1-2.jpg" alt="Apartamento - sala" />
+        <img src="imagens/apto1-3.jpg" alt="Apartamento - piscina" />
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+      <h3>Apartamento - 2 Quartos</h3>
+      <p class="descricao">Apartamento aconchegante em condomínio fechado, 
+        com área de lazer, piscina e segurança 24h.</p>
+      <p class="preco">Aluguel: R$ 1.200,00/mês</p>
+      <a href="https://api.whatsapp.com/send/?phone=5573999850066" class="btn">Agendar Visita</a>
+    </div>
+
+  </div> -->
+</section>
+
+
   <!-- Por que contratar -->
   <section>
     <h2>Por que contratar um corretor de imóveis?</h2>
@@ -203,9 +258,36 @@
   </p>
 </footer>
 
-</body>
-</html>
-</body>
-</html>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('.imovel').forEach(imovel => {
+    const imagens = imovel.querySelectorAll('.slider img');
+    let index = 0;
+
+    const nextBtn = imovel.querySelector('.next');
+    const prevBtn = imovel.querySelector('.prev');
+
+    if (imagens.length > 0) {
+      // garante que só a primeira aparece
+      imagens.forEach(img => img.classList.remove('ativo'));
+      imagens[0].classList.add('ativo');
+
+      nextBtn.addEventListener('click', () => {
+        imagens[index].classList.remove('ativo');
+        index = (index + 1) % imagens.length;
+        imagens[index].classList.add('ativo');
+      });
+
+      prevBtn.addEventListener('click', () => {
+        imagens[index].classList.remove('ativo');
+        index = (index - 1 + imagens.length) % imagens.length;
+        imagens[index].classList.add('ativo');
+      });
+    }
+  });
+});
+</script>
 
 
+</body>
+</html>
